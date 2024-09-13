@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
-    bucket = "mrcloudbooktwotier" # Replace with your actual S3 bucket name
-    key    = "EKS-Ajay/terraform.tfstate"
-    region = "ap-south-1"
+    bucket = "mrxubi-two-tier" # Replace with your actual S3 bucket name
+    key    = "EKS-xubi/terraform.tfstate"
+    region = "us-east-1"
   }
 }
