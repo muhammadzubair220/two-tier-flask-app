@@ -58,10 +58,10 @@ resource "aws_security_group" "Jenkins-sg" {
   }
 }
 
-resource "aws_instance" "web" {
-  ami                    = "ami-0522ab6e1ddcc7055"
+resource "aws_instance" "web1" {
+  ami                    = "ami-0e86e20dae9224db8"
   instance_type          = "t2.large"
-  key_name               = "Mumbai-mac"
+  key_name               = "dev"
   vpc_security_group_ids = [aws_security_group.Jenkins-sg.id]
   user_data              = templatefile("./script.sh", {})
   iam_instance_profile   = aws_iam_instance_profile.example_profile.name
